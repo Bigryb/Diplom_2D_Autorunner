@@ -68,12 +68,26 @@ ProjectSettings/
 
 > Рекомендуется открывать проект именно в версии Unity **6000.0.43f1**, так как она указана в `ProjectSettings/ProjectVersion.txt`.
 
-## Установка и запуск проекта
+## Запуск проекта
+
+Скачайте один из архив с игрой в соответствии со своей операционной системой:
+
+1. RusRunner_Win.zip.
+2. RusRunner_MacOS.tar.gz.
+
+Разархивируйте архив. Если у вас MacOS, установить и запустить игру.
+
+Если у вас Windows, запустить из распакованного архива исполняющий файл **My project.exe**
+
+
+
+
+## Установка и запуск проекта из исходника
 
 ### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/<user>/<repository>.git
+git clone https://github.com/Bigryb/Diplom_2D_Autorunner
 cd <repository>
 ```
 
@@ -128,69 +142,6 @@ Assets/Scenes/RunnerScene.unity
 4. Выберите целевую платформу.
 5. Нажмите **Switch Platform**.
 6. Нажмите **Build** или **Build And Run**.
-
-Рекомендуемая структура папок для локальных сборок:
-
-```text
-Builds/
-├── Windows/
-├── macOS/
-├── Linux/
-└── WebGL/
-```
-
-Каталог `Builds/` не рекомендуется хранить в Git-репозитории, если сборки занимают много места. Готовые архивы удобнее публиковать через **GitHub Releases**.
-
-## Инструкция по развертыванию
-
-### Вариант 1. Развертывание настольной версии через GitHub Releases
-
-1. В Unity откройте `Assets/Scenes/RunnerScene.unity`.
-2. Перейдите в **File → Build Settings / Build Profiles**.
-3. Выберите целевую платформу, например Windows, macOS или Linux.
-4. Убедитесь, что в список сцен добавлена `RunnerScene.unity`.
-5. Выполните сборку в папку `Builds/<platform>`.
-6. Заархивируйте полученную папку сборки.
-7. На GitHub откройте страницу репозитория.
-8. Перейдите в **Releases → Draft a new release**.
-9. Укажите версию, например `v1.0.0`.
-10. Загрузите архив сборки и опубликуйте релиз.
-
-После публикации пользователи смогут скачать готовую сборку без установки Unity Editor.
-
-### Вариант 2. Развертывание WebGL-версии на GitHub Pages
-
-1. Установите модуль **WebGL Build Support** через Unity Hub.
-2. В Unity откройте **File → Build Settings / Build Profiles**.
-3. Выберите платформу **WebGL** и нажмите **Switch Platform**.
-4. Добавьте `Assets/Scenes/RunnerScene.unity` в список сцен сборки.
-5. В настройках WebGL при необходимости отключите сжатие или выберите формат, поддерживаемый GitHub Pages.
-6. Соберите проект в папку:
-
-```text
-docs/
-```
-
-7. Закоммитьте папку `docs` в репозиторий:
-
-```bash
-git add docs
-git commit -m "Deploy WebGL build"
-git push origin main
-```
-
-8. На GitHub откройте **Settings → Pages**.
-9. В разделе **Build and deployment** выберите:
-
-```text
-Source: Deploy from a branch
-Branch: main
-Folder: /docs
-```
-
-10. Сохраните настройки и дождитесь публикации сайта.
-
-После развертывания GitHub Pages выдаст ссылку на WebGL-версию игры.
 
 ## Архитектурная идея
 
