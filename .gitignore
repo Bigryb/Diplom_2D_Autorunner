@@ -104,3 +104,9 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Игнорировать временные папки и настройки внутри подпапки RusRunner
+RusRunner/[Ll]ibrary/
+RusRunner/[Tt]emp/
+RusRunner/[Oo]bj/
+RusRunner/[Uu]ser[Ss]ettings/
