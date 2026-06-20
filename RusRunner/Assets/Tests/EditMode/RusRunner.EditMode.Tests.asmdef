@@ -1,0 +1,21 @@
+{
+  "name": "RusRunner.EditMode.Tests",
+  "rootNamespace": "RusRunner.Tests.EditMode",
+  "references": [
+    "RusRunner.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}
