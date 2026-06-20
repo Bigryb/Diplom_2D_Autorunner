@@ -146,6 +146,46 @@ Assets/Scenes/RunnerScene.unity
 5. Нажмите **Switch Platform**.
 6. Нажмите **Build** или **Build And Run**.
 
+## Тестирование через Unity Test Framework
+
+### Запуск через Unity
+
+1. Откройте проект `RusRunner` через Unity Hub.
+2. Дождитесь окончания компиляции скриптов.
+3. Откройте окно `Window -> General -> Test Runner`.
+4. Перейдите на вкладку `EditMode`.
+5. Нажмите `Run All`.
+
+### Запуск из командной строки
+
+Пример для macOS/Linux:
+
+```bash
+/Applications/Unity/Hub/Editor/6000.0.43f1/Unity.app/Contents/MacOS/Unity \
+  -batchmode \
+  -projectPath "RusRunner" \
+  -runTests \
+  -testPlatform EditMode \
+  -testResults "TestResults.xml" \
+  -quit
+```
+
+Пример для Windows:
+
+```bat
+"C:\Program Files\Unity\Hub\Editor\6000.0.43f1\Editor\Unity.exe" ^
+  -batchmode ^
+  -projectPath "RusRunner" ^
+  -runTests ^
+  -testPlatform EditMode ^
+  -testResults "TestResults.xml" ^
+  -quit
+```
+
+
+
+
+
 ## Архитектурная идея
 
 Проект построен по компонентно-модульному принципу. Центральным координатором выступает `RunnerBootstrap`, который связывает состояние игры, управление персонажем, генератор трассы, систему прогрессии, систему очков, бонусы и интерфейс.
